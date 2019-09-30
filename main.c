@@ -18,6 +18,7 @@ void double_array(uint32_t *p, int elems) {
     }
 }
 
+// Main tests it with an array and prints the results
 int main() {
     uint32_t buf[] = {1,2,3,4,5,6};
     double_array(buf, 6);
