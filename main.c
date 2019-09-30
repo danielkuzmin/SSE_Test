@@ -3,6 +3,7 @@
 #include <emmintrin.h>
 #include <stdint.h>
 
+// This doubles each element in the array using SSE
 void double_array(uint32_t *p, int elems) {
     while (elems >=4) {
         __m128i tmp = _mm_loadu_si128((__m128i *)p);
@@ -18,7 +19,6 @@ void double_array(uint32_t *p, int elems) {
 }
 
 int main() {
-    printf("Hello, World!\n");
     uint32_t buf[] = {1,2,3,4,5,6};
     double_array(buf, 6);
 
